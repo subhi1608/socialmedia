@@ -1,0 +1,9 @@
+{
+    "Buzzz": {
+      "dbConfig": {
+        "host": "localhost",
+        "port": 5000,
+        "dbName": "mongodb+srv://bhattsk:bhattsk@1608@cluster0.xjj50.mongodb.net/buzzz?retryWrites=true&w=majority"
+      }
+    }
+  }

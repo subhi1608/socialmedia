@@ -1,0 +1,21 @@
+.mainDiv{
+    background-color: rgb(243, 243, 243);
+    width:200px;
+    margin-top:1rem ;
+    padding:10px 20px;
+    border-radius: 10px;
+}
+
+.listDiv{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    margin:.5rem .2rem;
+}
+
+.listDiv>span {
+margin:.1rem .5rem ;
+}
+.list{
+    list-style: none;
+}

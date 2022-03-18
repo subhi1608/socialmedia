@@ -1,0 +1,13 @@
+.wrapper{
+    background-color: rgb(226, 231, 243);
+    margin-top: 1rem;
+    border-radius: 10px;
+    height: 70vh;
+}
+
+.profileDetail{
+    margin:1rem 1.9rem;
+}
+.addFriendButton{
+    margin:1rem 2.9rem;
+}

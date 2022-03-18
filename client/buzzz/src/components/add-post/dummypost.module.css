@@ -1,0 +1,101 @@
+.dummyPost{
+    background-color: white;
+    margin:1rem;
+    padding:.5rem;
+    border-radius: 10px;
+    box-shadow: -1px 1px 3px 1px rgba(0,0,0,0.63);
+    -webkit-box-shadow: -1px 1px 3px 1px rgba(0,0,0,0.63);
+    -moz-box-shadow: -1px 1px 3px 1px rgba(0,0,0,0.63);
+}
+.title{
+    display: flex;
+    align-items: center;
+}
+.avatarImage{
+    width:50px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.postTitle{
+    margin:7px;
+}
+.desc{
+    
+}
+.postDesc{
+    margin:8px 5px;
+}
+.postImage{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.postbuttons{
+    display: flex;
+    background-color: lightseagreen;
+}
+.socialbuttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex:4;
+    border: none;
+    cursor: pointer;
+}
+.socialRuler{
+    margin-top: .5rem;
+}
+.addComment{
+    display: flex;
+    justify-content: flex-start;
+    margin:.4rem .2rem;
+    padding: .2rem;
+}
+.commentText{
+    margin:.2rem;
+    padding:.3rem .8rem;
+    display: block;
+    width: 30rem;
+    border: none;
+    background-color: lightgray;
+    border-radius: 15px;
+}
+.commentText:focus{
+    outline: none;
+}
+.addCommentButton{
+    width: 3rem;
+    height: 1.5rem;
+    margin:.3rem;
+    cursor: pointer;
+    background-color: rgb(119, 119, 255);
+}
+.showComment{
+    display: flex;
+    align-items: center;
+    margin:.4rem .2rem;
+}
+.commentDetails{
+    margin-left: .8rem;
+    background-color: lightgray;
+    padding: .4rem;
+    border-radius: 5px;
+}
+
+.showCommentText{
+    font-size: 13px;
+}
+.count{
+    margin: .3rem;
+}
+.flagButton{
+    position: relative;
+    cursor: pointer;
+    left:25rem;
+    background-color: lightgray;
+    border-radius: 5px;
+    padding: 2px;
+    border: none;
+}

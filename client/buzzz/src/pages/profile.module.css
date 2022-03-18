@@ -1,0 +1,25 @@
+.container{
+    overflow-y: hidden;
+}
+.wrapper{
+    box-sizing: border-box;
+    display:flex;
+    padding:2rem 3rem;
+    flex-wrap: wrap;
+    background-color: lightgray;
+    height:100vh;
+}
+.container::-webkit-scrollbar {
+    display: none;
+}
+.profileSection{
+flex:10;
+margin:0rem 2rem;
+/* height: fit-content; */
+/* background-color: lightgreen; */
+}
+.suggestionSection{
+    flex:3;
+    /* background-color: lightgreen; */
+    /* height: fit-content; */
+}

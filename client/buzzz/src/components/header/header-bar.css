@@ -1,0 +1,113 @@
+.topbarContainer {
+    height: 50px;
+    width: 100%;
+    background-color: #1183b1;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  
+  .topbarLeft {
+    flex: 3;
+  }
+  
+  .logo {
+    font-size: 24px;
+    margin-left: 20px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    background:url('../../assets/TTN-logo.svg') no-repeat 0 0;
+    height: 50px;
+    width: 105px;
+    background-position: -105px 3px;
+    background-size: 180%;
+  }
+  
+  .topbarCenter {
+    flex: 5;
+    visibility: hidden;
+  }
+  
+  .searchbar {
+    width: 100%;
+    padding:2px 5px;
+    height: 30px;
+    background-color: rgb(251, 251, 251);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .searchIcon {
+    font-size: 20px !important;
+    margin-left: 10px;
+  }
+  
+  .searchInput {
+    display: block;
+    width: 100%;
+    border: none;
+    padding:1px;
+
+  }
+  
+  .searchInput:focus {
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+  }
+  
+  .topbarRight {
+    flex: 4;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+  }
+  .f{
+    visibility: hidden;
+  }
+  .topbarAvatar{
+    background:url('../../assets/user-logo.png') no-repeat;
+    width: 30px;
+    height:30px;
+  }
+  .topbarLink {
+    margin-right: 10px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .topbarIcons {
+    display: flex;
+  }
+  
+  .topbarIconItem {
+    margin-right: 15px;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .topbarIconBadge {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    color: rgb(241, 129, 129);
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+  }
+.logoutButton{
+  margin:8px;
+  padding: 5px;
+  cursor: pointer;
+}
