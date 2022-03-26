@@ -1,20 +1,24 @@
-.wrapper{
-    display: flex;
-    flex-wrap: wrap;
-    background-color: lightgray;
+.wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: lightgray;
 }
-.profileSection{
-    flex:8;
-    margin:2rem;
-    background-color: #ffffff;
-    border-radius: 10px;
-    height: max-content;
+.login {
+	background-color: rgb(201, 198, 193);
+	padding-top: 10rem;
+	height: 100vh;
 }
-.suggestionSection{
-    flex:3;
-    margin:1rem;
+.profileSection {
+	flex: 8;
+	margin: 2rem;
+	background-color: #ffffff;
+	border-radius: 10px;
+	height: max-content;
 }
-.userInfo{
-    display:flex;
-    
+.suggestionSection {
+	flex: 3;
+	margin: 1rem;
+}
+.userInfo {
+	display: flex;
 }
