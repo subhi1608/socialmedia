@@ -11,22 +11,24 @@ const CreatePost = () => {
 	const [fileInputState, setFileInputState] = useState("");
 	const [selectedFile, setSelectedFile] = useState();
 	const [inputText, setInputText] = useState("");
+	const [error, setError] = useState(false);
 
 	const loggedUser = useSelector((store) => store.profile.user);
 	const { _id, profilePic } = loggedUser;
 	const dispatch = useDispatch();
-	const inputRef = useRef();
 
 	const fileInputHandler = (e) => {
 		const file = e.target.files[0];
-		setInputText(inputRef.current.value);
 		setSelectedFile(file);
 		setFileInputState(e.target.value);
 	};
 	const inputHandler = async (e) => {
 		e.preventDefault();
 		const reader = new FileReader();
-
+		if (!inputText?.length) {
+			setError(true);
+			return;
+		}
 		if (selectedFile) {
 			reader.readAsDataURL(selectedFile);
 			reader.onloadend = () => {
@@ -37,26 +39,32 @@ const CreatePost = () => {
 			reader.onerror = () => {
 				console.error("AHHHHHHHH!!");
 			};
-			inputRef.current.value = "";
+
 			setInputText("");
 			setSelectedFile("");
 			setFileInputState("");
 			return;
 		}
-		dispatch(createPost({ description: inputRef.current.value, _id }));
-		inputRef.current.value = "";
+		dispatch(createPost({ description: inputText, _id }));
 		setSelectedFile("");
 		setInputText("");
+		setError(false);
 	};
 	return (
 		<div className={style.createPost}>
+			{error && !inputText.length && (
+				<p style={{ color: "red" }}>Please enter a text value</p>
+			)}
 			<form action="" className={style.inputTextForm} onSubmit={inputHandler}>
 				<Avatar Image={profilePic} />
 				<input
 					type="text"
 					name=""
 					id=""
-					ref={inputRef}
+					onChange={(e) => {
+						setInputText(e.target.value);
+					}}
+					value={inputText}
 					className={style.postInput}
 					placeholder="Create a post"
 				/>

@@ -6,11 +6,9 @@ import icon from "../../../assets/person.jpg";
 import Avatar from "../../../utils/avatar";
 const UserProfileCard = () => {
 	const response = useSelector((state) => state.profile.user);
-	const dispatch = useDispatch();
+
 	const { username, profilePic } = response;
-	useEffect(() => {
-		dispatch(getUser());
-	}, []);
+
 	return (
 		<div className={styles.user}>
 			<div className={styles.coverdiv}>

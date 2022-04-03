@@ -22,3 +22,9 @@
 .userInfo {
 	display: flex;
 }
+.profileWrapper {
+	display: flex;
+}
+.userDetails {
+	margin: 1rem 3rem;
+}

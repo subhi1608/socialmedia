@@ -117,7 +117,6 @@ module.exports.getFlaggedPosts = async (user) => {
 		const allFlaggedPosts = await Post.find({ isFlagged: true })
 			.populate("userId")
 			.sort({ createdAt: -1 });
-		console.log(allFlaggedPosts, "allFlaggedPosts");
 		return allFlaggedPosts;
 	} catch (err) {
 		return err;
@@ -133,7 +132,8 @@ module.exports.addComment = async ({ desc, userId, postId }) => {
 		await fetchedPost.updateOne({
 			$push: { comments: { desc, userId, username, profilePic } },
 		});
-		return fetchedPost;
+		const updatedFetchedPost = await Post.findById(postId);
+		return updatedFetchedPost;
 	} catch (err) {
 		return err;
 	}

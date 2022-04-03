@@ -18,7 +18,6 @@ const NewsFeed = () => {
 	useEffect(() => {
 		dispatch(getAllPosts(loggedUserId));
 		dispatch(getUser());
-		console.log(isUserCommented, "loggiing");
 	}, [dispatch, isUserCommented]);
 	const filteredPostHandler = async () => {
 		setIsClicked(!isClicked);

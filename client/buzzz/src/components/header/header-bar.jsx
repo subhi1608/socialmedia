@@ -8,14 +8,6 @@ import axios from "../../axios";
 
 export default function HeaderBar() {
 	const image = useSelector((store) => store.profile.user.profilePic);
-
-	const logoutHandler = () => {
-		console.log("inside");
-		const res = axios({
-			method: "GET",
-			url: `/user/logout`,
-		});
-	};
 	return (
 		<div className="topbarContainer">
 			<div className="topbarLeft">
@@ -37,7 +29,6 @@ export default function HeaderBar() {
 					<Link to="/myprofile">
 						<Avatar Image={image} />
 					</Link>
-					<button onClick={logoutHandler}>Logout</button>
 				</div>
 			</div>
 		</div>
